@@ -1,0 +1,108 @@
+.cell{
+  width: 3ch;
+  height: 3ch; /* ch units represent the width of the '0' character */
+  padding: 0; /* Minimal padding */
+  border: 1px solid #ccc; /* Example border */
+  text-align: center; /* Center the text/character */
+  font-size: 16px; /* Adjust based on your needs */
+ }
+ 
+ 
+ .cell:focus {
+  outline: none; /* Remove the default focus style */
+  cursor: none;
+  background-color: #FFD902;
+ 
+ 
+  border-radius: 0em;
+ }
+ 
+ 
+ /* #FFD902 */
+ 
+ 
+ .game-board{
+  border-collapse: collapse; 
+  margin: auto;
+  padding: 0em;
+  border: 0px;
+ }
+ 
+ 
+ .board-row{
+  border: 1px solid black; /* Adds a solid border to each cell */
+  padding: 0px;
+ }
+ 
+ 
+ .board-item{
+  border: 1px solid black;
+  padding: 0px;
+ }
+ 
+ 
+ .dim-input{
+  height: 3ch;
+  padding: 0;
+  border: 0px solid #ccc;
+  text-align: center;
+  font-size: 16px;
+  margin: 2em;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ .clue-board {
+  width: 40em;
+  height: auto; /* Adjusted to auto for dynamic content height */
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: separate; /* Changed to 'separate' to allow border-radius */
+  border-spacing: 0; /* Remove spacing between cells */
+  border: 2px solid black;
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensures the content respects the border-radius */
+ }
+ 
+ 
+ .clue-board td {
+  text-align: center; /* Center text horizontally */
+  vertical-align: middle; /* Center text vertically */
+  padding: 10px; /* Add some padding for better spacing */
+ }
+ 
+ 
+ /* Optional: If you want the first row (headers) to have a different style */
+ .clue-board tr:first-child td {
+  font-weight: bold; /* Example to make the first row text bold */
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ /* For the Clue list */
+ .no-bullets {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  text-align: left; /* Align text to the left within the centered <ul> */
+  display: inline-block; /* Allows the <ul> to be centered within the <td> */
+  width: 100%; /* Ensure <ul> takes the full width of the <td> */
+ }
+ 
+ 
+ .no-bullets li {
+  padding: 5px 0; /* Add vertical padding for spacing between list items */
+  /* Optional: additional styling here */
+ }
+ 
+ 
+ 
+ 
+ 
+ 
