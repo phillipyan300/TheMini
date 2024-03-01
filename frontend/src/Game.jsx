@@ -1,9 +1,18 @@
 import Board from './Board'
 import ClueBoard from './ClueBoard'
 import React, { useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './index.css'
 
 function Game(){
+
+    // To return to starting page
+    const navigate = useNavigate();
+
+    const returnToStart = () => {
+        navigate('/');
+    };
 
     //Default dimension is 5
     const [dim, setDim] = useState(5);
@@ -38,13 +47,20 @@ function Game(){
 
     return(
         <>
-        <button onClick={fetchData}>Fetch Data</button> {/* Add this button */}
-        <Board dimension={dim}/>
-        <div className="dim-input">
-            <input type="number" value={dim} onChange={onDimChange}></input>
+        <div className="game-container"> 
+            <div> 
+                <Board dimension={dim}/>
+            </div>
+            <div className="dim-label">
+                <ClueBoard horizontal={horizontal} vertical={vertical}/>
+            </div>
         </div>
-        <div className="dim-label">
-            <ClueBoard horizontal={horizontal} vertical={vertical}/>
+       
+
+         <div><button className="button" onClick={returnToStart}>Return to Start</button></div>
+         <button className="button" onClick={fetchData}>Fetch Data</button> {/* Add this button */}
+         <div className="dim-input">
+            <input type="number" value={dim} onChange={onDimChange}></input>
         </div>
         </>
     )
